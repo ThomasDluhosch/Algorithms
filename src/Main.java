@@ -1,4 +1,5 @@
 import DataStructures.ArrayQueue;
+import DataStructures.ArrayStack;
 import SearchAndSort.*;
 
 import java.util.Arrays;
@@ -19,6 +20,7 @@ public class Main {
         System.out.println(Arrays.toString(arr));
 
         //testArrayQueue();
+        //testArrayStack();
 
     }
 
@@ -45,5 +47,21 @@ public class Main {
         que.dequeue();
         que.dequeue();
         que.getValues();
+    }
+
+    private static void testArrayStack(){
+        ArrayStack st = new ArrayStack(4);
+        st.push(7);
+        st.push(69);
+        st.push(420);
+        st.getValues();
+        st.push(4561);
+        st.push(45261);
+        st.getValues();
+        st.pop();
+        st.pop();
+        st.pop();
+        st.pop();
+        st.getValues();
     }
 }

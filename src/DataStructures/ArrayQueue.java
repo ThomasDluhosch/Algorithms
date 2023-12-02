@@ -1,7 +1,8 @@
 package DataStructures;
 
 // First in first out
-// Wenn Array voll -> resize()
+// Wenn Array voll -> resize(*2)
+// Wenn Array zu 1/4 gefüllt -> resize(/2)
 
 import java.util.Arrays;
 
