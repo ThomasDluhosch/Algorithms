@@ -1,3 +1,4 @@
+import DataStructures.ArrayQueue;
 import SearchAndSort.*;
 
 import java.util.Arrays;
@@ -17,5 +18,32 @@ public class Main {
         ShellSort.sort(arr);
         System.out.println(Arrays.toString(arr));
 
+        //testArrayQueue();
+
+    }
+
+    private static void testArrayQueue(){
+        ArrayQueue que = new ArrayQueue(4);
+        que.enqueue(3);
+        que.enqueue(22);
+        que.enqueue(69);
+        que.enqueue(420);
+        que.getValues();
+        que.enqueue(563);
+        que.getValues();
+        que.enqueue(324);
+        que.enqueue(56235413);
+        que.enqueue(5612343);
+        que.enqueue(56323);
+        que.getValues();
+        que.dequeue();
+        que.dequeue();
+        que.dequeue();
+        que.dequeue();
+        que.dequeue();
+        que.dequeue();
+        que.dequeue();
+        que.dequeue();
+        que.getValues();
     }
 }
