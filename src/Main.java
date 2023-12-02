@@ -3,28 +3,55 @@ import DataStructures.ArrayStack;
 import SearchAndSort.*;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr = {9,8,7,6,5,4,3,2,-1};
-
-
-        System.out.println(Arrays.toString(arr));
-        InsertionSort.sort(arr);
-        System.out.println(Arrays.toString(arr));
-        System.out.println("Target is on Index: " +BinarySearch.search(arr, 3));
-        KnuthShuffle.shuffle(arr);
-        System.out.println(Arrays.toString(arr));
-        ShellSort.sort(arr);
-        System.out.println(Arrays.toString(arr));
-
+        //testSorting();
         //testArrayQueue();
         //testArrayStack();
 
     }
 
-    private static void testArrayQueue(){
+    private static void testSorting() {
+        long startTime, endTime;
+
+        int[] arr = generateRandomArray(100000);
+        //System.out.println(Arrays.toString(arr));
+
+        startTime = System.currentTimeMillis();
+        QuickSort.sort(arr);
+        endTime = System.currentTimeMillis();
+        System.out.println("QuickSort: (" + (endTime - startTime) + "ms) \n");
+
+        KnuthShuffle.shuffle(arr);
+        startTime = System.currentTimeMillis();
+        MergeSort.sort(arr);
+        endTime = System.currentTimeMillis();
+        System.out.println("MergeSort: (" + (endTime - startTime) + "ms) \n");
+
+        KnuthShuffle.shuffle(arr);
+        startTime = System.currentTimeMillis();
+        InsertionSort.sort(arr);
+        endTime = System.currentTimeMillis();
+        System.out.println("InsertionSort: (" + (endTime - startTime) + "ms) \n");
+
+        KnuthShuffle.shuffle(arr);
+        startTime = System.currentTimeMillis();
+        SelectionSort.sort(arr);
+        endTime = System.currentTimeMillis();
+        System.out.println("SelectionSort: (" + (endTime - startTime) + "ms) \n");
+
+        KnuthShuffle.shuffle(arr);
+        startTime = System.currentTimeMillis();
+        ShellSort.sort(arr);
+        endTime = System.currentTimeMillis();
+        System.out.println("ShellSort: (" + (endTime - startTime) + "ms) \n");
+
+    }
+
+    private static void testArrayQueue() {
         ArrayQueue que = new ArrayQueue(4);
         que.enqueue(3);
         que.enqueue(22);
@@ -49,7 +76,7 @@ public class Main {
         que.getValues();
     }
 
-    private static void testArrayStack(){
+    private static void testArrayStack() {
         ArrayStack st = new ArrayStack(4);
         st.push(7);
         st.push(69);
@@ -64,4 +91,15 @@ public class Main {
         st.pop();
         st.getValues();
     }
+
+    private static int[] generateRandomArray(int size) {
+        int[] array = new int[size];
+        Random random = new Random();
+        for (int i = 0; i < size; i++) {
+            array[i] = random.nextInt();
+        }
+        return array;
+    }
+
+
 }

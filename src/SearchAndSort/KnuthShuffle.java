@@ -5,11 +5,11 @@ import java.util.Random;
 
 public class KnuthShuffle {
 
-    public static void shuffle(int[] array){
+    public static void shuffle(int[] array) {
         Random rn = new Random();
-        int arrayLength = array.length-1;
-        for(int i = 0; i<arrayLength; i++){
-            exchange(array, i, rn.nextInt(0,arrayLength) );
+        int arrayLength = array.length - 1;
+        for (int i = 0; i < arrayLength; i++) {
+            exchange(array, i, rn.nextInt(0, arrayLength));
         }
     }
 

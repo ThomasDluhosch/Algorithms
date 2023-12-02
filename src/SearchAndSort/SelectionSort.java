@@ -3,6 +3,8 @@ package SearchAndSort;
 // Nicht besonders Effizient -> Scannt von links nach rechts
 // Finde Minimum im Array -> Vertausche a[min] mit a[j]
 // Alles kleiner i -> sortiert | Alles größer i -> unsortiert
+// inplace      not stable
+// best: O(N^2)   avg: O(N^2)    worst: O(N^2)
 
 public class SelectionSort {
 

@@ -3,6 +3,8 @@ package SearchAndSort;
 // Erweiterung von InsertionSort (h-sort)
 // Jede h-te Stelle wird vorsortiert
 // Zum Schluss ist h = 1
+// inplace          not stable
+// best: O(N logN)   avg: O( ? )    worst: O(N^(3/2))
 
 import javax.xml.crypto.Data;
 
