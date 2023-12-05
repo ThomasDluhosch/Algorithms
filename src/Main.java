@@ -1,6 +1,7 @@
 import DataStructures.ArrayQueue;
 import DataStructures.ArrayStack;
 import SearchAndSort.*;
+import TreesAndTables.BinarySearchTree;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -11,6 +12,21 @@ public class Main {
         //testSorting();
         //testArrayQueue();
         //testArrayStack();
+        testBST();
+
+    }
+
+    private static void testBST(){
+
+        BinarySearchTree bst = new BinarySearchTree();
+        System.out.println("bst count: "+bst.size());
+        bst.put(1,6);
+        bst.put(2,5);
+        bst.put(3,4);
+        bst.put(4,3);
+        bst.put(5,2);
+        bst.put(6,1);
+        System.out.println("bst count: "+bst.size());
 
     }
 
