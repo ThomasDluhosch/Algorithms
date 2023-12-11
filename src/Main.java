@@ -1,10 +1,13 @@
 import DataStructures.ArrayQueue;
 import DataStructures.ArrayStack;
+import Graphs.Graph;
 import SearchAndSort.*;
 import TreesAndTables.BinarySearchTree;
 
 import java.util.Arrays;
 import java.util.Random;
+
+import static Graphs.Graph.degree;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,8 +15,32 @@ public class Main {
         //testSorting();
         //testArrayQueue();
         //testArrayStack();
-        testBST();
+        //testBST();
+        testGraph();
 
+    }
+
+    private static void testGraph(){
+
+        Graph g = new Graph(10);
+        g.addEdge(0,1);
+        g.addEdge(0,5);
+        g.addEdge(1,8);
+        g.addEdge(1,9);
+        g.addEdge(2,3);
+        g.addEdge(2,5);
+        g.addEdge(2,9);
+        g.addEdge(3,5);
+        g.addEdge(3,1);
+        g.addEdge(4,9);
+        g.addEdge(5,8);
+        g.addEdge(6,9);
+        g.addEdge(6,1);
+        g.addEdge(7,1);
+        g.addEdge(8,8);
+        g.addEdge(9,4);
+        g.addEdge(9,0);
+        System.out.println(g.toString());
     }
 
     private static void testBST(){
