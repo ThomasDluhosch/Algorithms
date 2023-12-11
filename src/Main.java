@@ -1,5 +1,6 @@
 import DataStructures.ArrayQueue;
 import DataStructures.ArrayStack;
+import Graphs.DepthFirstSearch;
 import Graphs.Graph;
 import SearchAndSort.*;
 import TreesAndTables.BinarySearchTree;
@@ -41,6 +42,10 @@ public class Main {
         g.addEdge(9,4);
         g.addEdge(9,0);
         System.out.println(g.toString());
+
+        DepthFirstSearch dfs = new DepthFirstSearch(g, 2);
+        System.out.println(dfs.hasPathTo(1));
+        System.out.println(dfs.pathTo(1));
     }
 
     private static void testBST(){
