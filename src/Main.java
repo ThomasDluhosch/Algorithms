@@ -1,6 +1,5 @@
 import DataStructures.ArrayQueue;
 import DataStructures.ArrayStack;
-import DataStructures.SymbolTable;
 import SearchAndSort.*;
 
 import java.util.Arrays;
@@ -12,20 +11,6 @@ public class Main {
         //testSorting();
         //testArrayQueue();
         //testArrayStack();
-
-        testSymbolTable();
-
-    }
-
-    private static void testSymbolTable(){
-
-        SymbolTable st = new SymbolTable(4);
-
-        st.put(1,2);
-        st.put(1,153123);
-        System.out.println(st.get(2));
-
-
 
     }
 
